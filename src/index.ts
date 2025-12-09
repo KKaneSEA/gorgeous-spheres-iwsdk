@@ -61,20 +61,20 @@ async function main() {
   world.camera.position.set(0, 1.6, 2);
   world.camera.lookAt(0, 0, -2);
 
-  const dirLight = new DirectionalLight(0xBADFFF, 5.5);
-  dirLight.position.set(0, 0, 9);
+  const dirLight = new DirectionalLight('white', 4.5);
+  dirLight.position.set(1, 1, 3);
   world.scene.add(dirLight);
   console.log('Directional light added');
 
-  const dirLight2 = new DirectionalLight(0xBAD000, 1.5);
-  dirLight2.position.set(1, -3, -9);
-  world.scene.add(dirLight2);
+  // const dirLight2 = new DirectionalLight('white', 0.5);
+  // dirLight2.position.set(1, -3, -9);
+  // world.scene.add(dirLight2);
   
-  const dirLight3 = new DirectionalLight(0xBAD000, 1.5);
+  const dirLight3 = new DirectionalLight("white", 0.7);
   dirLight3.position.set(0, 1, -7);
   world.scene.add(dirLight3);
 
-  const ambLight = new AmbientLight(0xBADF0F, 0.001);
+  const ambLight = new AmbientLight("yellow", 0.05);
   world.scene.add(ambLight);
   console.log('Ambient light added');
 
